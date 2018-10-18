@@ -6,16 +6,19 @@
 		<link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.0/normalize.min.css">
 		<link rel="stylesheet" type="text/css" href="css/style.css">
 		<link href="https://fonts.googleapis.com/css?family=Roboto:400,900" rel="stylesheet">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
 	</head>
 	<body>
+	
+	<div class="wrapper">
 		<header>
 			<nav>
-				<p align="right">
-			 		<a href="about.html">About</a>
-			 		<a href="process.html">Process</a>
-			 		<a href="work.html">Work</a>
-			 		<a href="contact.html">Contact</a>
-				</p>
+				<ul class="navigation">
+			 		<li class="brackets"><a class="nav" href="about.html">About</a></li>
+					<li class="brackets"><a class="nav" href="process.html">Process</a></li>
+			 		<li class="brackets"><a class="nav" href="work.html">Work</a></li>
+			 		<li class="brackets"><a class="nav" href="contact.html">Contact</a></li>
+				</ul>
 			</nav>
 
 	<!-- Logo -->
@@ -46,13 +49,11 @@
 			I am currently seeking UX opportunities in the Berlin area or remotely that combines my newly acquired technical skills with my experience in research, analytics, and data visualisation. I want to be involved in projects that I can be proud of and join an amazing team that believes cooperation is the right way to evolve and create great products and experiences. If you are interested in helping me make this happen, please get in touch.
 			</p>
 		</center>
-		</div>
 		<center>
 			<button type="button">
 				<a href="files/resume.pdf" target="_blank">MY RESUME</a>
 			</button>
 		</center>
-		</div>
 		<div>
 			<center>
 				<h1>Work</h1>
@@ -60,22 +61,29 @@
 			</center>
 		</div>
 		<div>
-			<div>
-     		<p>Perfect Properties Case Study</p>
-				<img src="img/PerfectPropertiesmockup1.png" class="projectImage" alt="Perfect Properties Case Study">
-				<button type="button">View More</button>
-     	</div>
-	    <div>
-	      <p>InkDe Case Study</p>
-				<img src="img/InkDEmockup1.png" class="projectImage" alt="InkDe Case Study">
-				<button type="button">View More</button>
-	    </div>
-      <div>
-				<p>Disgusting Beauty Website Redesign</p>
-				<img src="img/DisgustingBeautyLogo.png" class="projectImage" alt="Disgusting Beauty Website Redesign">
-				<button type="button">View More</button>
-   		</div>
-   	</div>
+			<div class="columns-container">	
+				<div class="column-4">
+					<p>Perfect Properties Case Study</p>
+						<img src="img/PerfectPropertiesmockup1.png" class="projectImage" alt="Perfect Properties Case Study">
+						<button type="button">View More</button>
+				</div>
+				<div class="column-4">
+					<p>InkDe Case Study</p>
+						<img src="img/InkDEmockup1.png" class="projectImage" alt="InkDe Case Study">
+						<button type="button">View More</button>
+				</div>
+				<div class="column-4">
+					<p>Disgusting Beauty Website Redesign</p>
+						<img src="img/DisgustingBeautyLogo.png" class="projectImage" alt="Disgusting Beauty Website Redesign">
+						<button type="button">View More</button>
+				</div>		
+				<div class="column-4">
+					<p>Disgusting Beauty Website Redesign</p>
+						<img src="img/DisgustingBeautyLogo.png" class="projectImage" alt="WORK SAMPLE 4">
+						<button type="button">View More</button>
+				</div>				
+			</div>				
+		</div>
    	<center>
    		<h1>Contact</h1>
    		<p>Currently available for hiring and would love to hear from you
@@ -98,5 +106,6 @@
 				</svg>
 			</a>
 		</center>
+	</div>
 	</body>
 </html>
