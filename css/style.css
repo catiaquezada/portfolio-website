@@ -35,7 +35,7 @@ header {
 	width: 100%;
 	max-width: 1000px;
 	margin: 0 auto; /* No spacing to top and bottom and auto spacing to left and right */
-	padding: 0 20px;
+	padding: 0 10px;
 	}
 
 div {
@@ -56,7 +56,10 @@ div {
 	width: 24%;
 	display: inline-block;
 	margin-right: 1%;
-	text-align: left;
+	margin-bottom: 30px;
+	text-align: center;
+	float: left;
+	vertical-align: top;
 	}
 
 .column-4:last-child {
@@ -89,7 +92,7 @@ h1 {
 	font-size: 30px;
 	color: #3E3D3D;
 	text-align: center;
-	margin-top: 35px;
+	margin-top: 25px;
 	margin-bottom: 30px;
 }
 
@@ -179,6 +182,12 @@ header img {
 	margin-top: 20px;
 	}
 
+#Navigation{
+	top : 0px;
+    float : right;
+    height : 100px;
+}
+
 .navigationTop {
 	list-style-type: none;
 	margin: 0;
@@ -216,6 +225,42 @@ nav .active {
   color: #ffffff;
 }
 
+#Navigation ul li a:before,
+#Navigation ul li a:after
+{
+	position: absolute;
+	top: 15px;
+	left: 50%;
+	width: 50px;
+	height: 50px;
+	border: 4px solid #9B9B9B;
+	transform: translateX(-50%) translateY(-50%) scale(0.8);
+	border-radius: 50%;
+	background: transparent;
+	content: "";
+	opacity: 0;
+	transition: all 0.3s;
+	z-index: -1;
+}
+
+#Navigation ul li a:after
+{
+	border-width: 2px;
+	transition: all 0.4s;
+}
+
+#Navigation ul li a:hover:before	
+{
+	opacity: 1;
+	transform: translateX(-50%) translateY(-50%) scale(1);
+}
+
+#Navigation ul li a:hove:after	
+{
+	opacity: 1;
+	transform: translateX(-50%) translateY(-50%) scale(1.3);
+}
+
 /* FOOTER */
 
 
@@ -242,7 +287,7 @@ nav .active {
 	}
 }
 
-@media all and (max-width: 575px) {
+@media all and (max-width : 1225px ){
   .logo {
     height: 40px;
     margin-top: 5px;
@@ -258,46 +303,3 @@ nav .active {
     margin: auto;
   }
 }
-	
-	
-	
-	
-
-
-
-/* Circle behind navigation - This is the code that appears in the website but I do not know how to "activate" it*/
-
-	div.circleBehind a:before, 
-	div.circleBehind a:after
-	{
-		position: absolute;
-		top: 22px;
-		left: 50%;
-		width: 50px;
-		height: 50px;
-		border: 4px solid #0277bd;
-		transform: translateX(-50%) translateY(-50%) scale(0.8);
-		border-radius: 50%;
-		background: transparent;
-		content: "";
-		opacity: 0;
-		transition: all 0.3s;
-		z-index: -1;
-}
-	div.circleBehind a:after
-	{
-		border-width: 2px;
-		transition: all 0.4s;
-	}
-
-	div.circleBehind a:hover:before
-	{
-		opacity: 1;
-		transform: translateX(-50%) translateY(-50%) scale(1);
-	}
-
-	div.circleBehind a:hover:after
-	{
-		opacity: 1;
-		transform: translateX(-50%) translateY(-50%) scale(1.3);
-	}
