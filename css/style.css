@@ -9,19 +9,26 @@ Secondary colour (salmon): #FFC7C2;
 
 */
 
-/* Layout Styling */
+/* Fonts used
+Body Text: Lato (100,300,400,900)
+Navigation Text: Raleway (100,300,400,700,900)
+*/
 
-.container {
-	margin: 0 auto; /* No spacing to top and bottom and auto spacing to left and right */
+/* GENERAL */
+
+body {
+	font-family: 'Raleway', sans-serif;
+	font-family: 'Lato', sans-serif;
+	font-size: 16px;
+	line-height: 1.6;
+}
+
+header {
+  border-bottom: none;
 }
 
 * {
 	box-sizing: border-box;
-}
-
-img.resize {
-	max-width:100%;
-	max-height:100%;
 }
 
 .wrapper {
@@ -30,6 +37,15 @@ img.resize {
 	margin: 0 auto; /* No spacing to top and bottom and auto spacing to left and right */
 	padding: 0 20px;
 	}
+
+div {
+	padding: 0px;
+	margin: 0px;
+}
+
+.container {
+	margin: 0 auto; /* No spacing to top and bottom and auto spacing to left and right */
+}
 
 .columns-container {
 	font-size: 0;
@@ -40,61 +56,57 @@ img.resize {
 	width: 24%;
 	display: inline-block;
 	margin-right: 1%;
-	text-align: center;
+	text-align: left;
 	}
 
 .column-4:last-child {
 	margin-right: 0;
 	}
 
-.navigation {
-	list-style-type: none;
-	padding: 0;
-	float: right;
-	}
+.column-4 img {
+  max-width: 100%;
+}
 
-.navigation > li {
-	display: inline-block;
-	margin-left: 10px;
-	}
+.Site {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
 
-.logo {
-	margin-top: 20px;
-	}
+.Site-content {
+  flex: 1;
+}
 
 .content {
 	text-align: center;
 	}
 
-body {
-	font-family: 'Roboto', sans-serif;
-	font-size: 16px;
-	line-height: 1.6;
-}
 
-nav {
-	display: inline-block;
-	float: right;
-	margin-right: 1.1%;
-	margin-top: 20px;
-	}
+/* TYPOGRAPHY */
 
 h1 {
+	font-family: 'Lato', sans-serif;
 	font-size: 30px;
+	color: #3E3D3D;
 	text-align: center;
+	margin-top: 35px;
+	margin-bottom: 30px;
 }
 
 h2 {
+	font-family: 'Lato', sans-serif;
+	color: #3E3D3D;
 	font-size: 24px;
 }
 
 h3 {
+	font-family: 'Lato', sans-serif;
+	color: #3E3D3D;
 	font-size: 18px
 }
 
-div {
-	padding: 0px;
-	margin: 0px;
+.center {
+  text-align: center;
 }
 
 a {
@@ -105,7 +117,31 @@ a:hover {
 	text-decoration: none;
 }
 
-button {
+a:active {
+  color: #3E3D3D;
+}
+
+.project-info {
+  text-align: justify;
+}
+
+
+/* IMAGES */
+
+img.resize {
+	max-width:100%;
+	max-height:100%;
+}
+
+.center img {
+  max-width: 100%;
+}
+
+
+/* BUTTONS */
+
+button, /* Applies for buttons in a form */ 
+.button { /* Applies for links with the button class */
 	border: none;
 	font-family: inherit;
 	background-color: #3E3D3D;
@@ -122,10 +158,69 @@ button a {
 }
 
 button:hover,
+.button:hover,
 button:focus {
 	cursor: pointer;
 	opacity: 0.8;
 }
+
+
+/* HEADER */
+
+header img {
+	width: 280px;
+	display: inline-block;
+	margin-top: 15px;
+	margin-bottom: 10px;
+	margin-left: 20px;
+}
+
+.logo {
+	margin-top: 20px;
+	}
+
+.navigationTop {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	float: right;
+}
+
+.navigationTop > li {
+	display: inline-block;
+	margin: 10px;
+	margin-top: 20px;
+	}
+
+.navigationTop li a{
+	color: #000000;
+	text-decoration: none;
+}
+
+nav {
+	display: inline-block;
+	float: right;
+	margin-right: 1.1%;
+	margin-top: 20px;
+	}
+
+nav a {
+  font-family: 'Raleway', sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+  color: #3E3D3D;
+}
+
+nav .active {
+  text-decoration: none;
+  color: #ffffff;
+}
+
+/* FOOTER */
+
+
+
+/* RESPONSIVE */
 
 @media all and (max-width: 500px) {
   .logo {
@@ -144,4 +239,65 @@ button:focus {
 	}
 	.column-4:nth-child(2) {
 	margin-right: 0;
+	}
+}
+
+@media all and (max-width: 575px) {
+  .logo {
+    height: 40px;
+    margin-top: 5px;
+  }
+
+  h1 {
+    font-size: 24px;
+    text-align: left;
+  }
+
+  .column-4 {
+    width: 98%;
+    margin: auto;
+  }
+}
+	
+	
+	
+	
+
+
+
+/* Circle behind navigation - This is the code that appears in the website but I do not know how to "activate" it*/
+
+	div.circleBehind a:before, 
+	div.circleBehind a:after
+	{
+		position: absolute;
+		top: 22px;
+		left: 50%;
+		width: 50px;
+		height: 50px;
+		border: 4px solid #0277bd;
+		transform: translateX(-50%) translateY(-50%) scale(0.8);
+		border-radius: 50%;
+		background: transparent;
+		content: "";
+		opacity: 0;
+		transition: all 0.3s;
+		z-index: -1;
+}
+	div.circleBehind a:after
+	{
+		border-width: 2px;
+		transition: all 0.4s;
+	}
+
+	div.circleBehind a:hover:before
+	{
+		opacity: 1;
+		transform: translateX(-50%) translateY(-50%) scale(1);
+	}
+
+	div.circleBehind a:hover:after
+	{
+		opacity: 1;
+		transform: translateX(-50%) translateY(-50%) scale(1.3);
 	}
